@@ -1,0 +1,12 @@
+# Four-class contract-region detector. Generated data is Git-ignored.
+path: datasets/processed/contract_regions_yolo_v1
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 4
+names:
+  0: signature
+  1: seal
+  2: table
+  3: signature_block

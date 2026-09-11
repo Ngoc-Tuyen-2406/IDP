@@ -1,0 +1,9 @@
+CONTRACT NUMBER: IDP-2024-007
+TITLE: Warehouse Lease for Finished Goods Storage
+PARTNER: Alpha Manufacturing JSC
+STATUS: Terminated
+
+TERMINATION NOTE
+- Goods moved to new consolidated warehouse in Long An.
+- Early termination executed on 2026-05-15.
+- Original lease expiry remained 2027-02-14.

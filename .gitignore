@@ -1,0 +1,92 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python caches, virtual environments, and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+.venv*/
+
+# Java build output
+backend/idpapi/target/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+# TypeScript output emitted beside Vite/Tailwind configuration sources
+frontend/vite.config.js
+frontend/vite.config.d.ts
+frontend/tailwind.config.js
+frontend/tailwind.config.d.ts
+
+# Raw datasets and generated annotations
+datasets/raw/
+datasets/processed/
+datasets/exports/
+datasets/annotations/**
+!datasets/annotations/**/
+!datasets/annotations/**/README.md
+!datasets/annotations/**/classes.txt
+
+# AI model weights and generated output
+ai-server/trained_models/**/weights/
+ai-server/trained_models/**/*.pt
+ai-server/trained_models/**/*.onnx
+ai-server/trained_models/**/*.pth
+ai-server/trained_models/**/*.safetensors
+ai-server/trained_models/**/*.faiss
+ai-server/trained_models/**/*.index
+ai-server/uploads/**
+!ai-server/uploads/README.md
+ai-server/outputs/**
+!ai-server/outputs/README.md
+ai-server/logs/**
+!ai-server/logs/README.md
+ai-server/runs/
+runs/
+
+# Runtime data and local files
+storage/contracts/**
+storage/signatures/**
+# Runtime uploads stored by the Spring Boot service (seed .txt fixtures stay tracked)
+backend/idpapi/storage/contracts/**/*.pdf
+backend/idpapi/storage/contracts/**/*.doc
+backend/idpapi/storage/contracts/**/*.docx
+backend/idpapi/storage/contracts/**/*.png
+backend/idpapi/storage/contracts/**/*.jpg
+backend/idpapi/storage/contracts/**/*.jpeg
+*.db
+*.sqlite
+*.sqlite3
+runtime-*.json
+*.log
+test_images/
+
+# Local tools, temporary files, and unrelated workspace content
+.agents/
+.tmp/
+.idea/
+.vscode/
+*.iml
+.pnpm-store/
+pnpm-store/
+tmp/
+interview-preparation/
+
+# Large local archives
+signature_yolo_v1.zip
+*.zip
+
+# Operating-system files
+Thumbs.db
+.DS_Store

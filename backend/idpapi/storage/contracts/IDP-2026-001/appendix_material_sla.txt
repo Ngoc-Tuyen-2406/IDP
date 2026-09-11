@@ -1,0 +1,9 @@
+APPENDIX: PL-01
+CONTRACT NUMBER: IDP-2026-001
+TITLE: Material Catalog and Delivery SLA
+
+CONTENT
+- Material group A lead time: 10 working days.
+- Material group B lead time: 15 working days.
+- Required OTIF target: 95 percent.
+- Inspection within 3 business days after delivery.

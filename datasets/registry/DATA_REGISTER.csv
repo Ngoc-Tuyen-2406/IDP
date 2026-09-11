@@ -1,0 +1,9 @@
+dataset_id,source_url,local_archive,license,allowed_scope,status,notes
+contract_nli,https://stanfordnlp.github.io/contract-nli/,contract-nli.zip,CC-BY-4.0,research_and_training,ready,"607 NDA documents; use for NLI, evidence retrieval, risk evaluation; preserve LICENSE and TERMS"
+signature_rf100,https://universe.roboflow.com/roboflow-100/signatures-xc8up,signatures.v2-release.yolov11.zip,CC-BY-4.0,research_and_training,ready,"368 images in YOLOv11 format; use for signature detection only"
+signature_roboflow_amruth,https://universe.roboflow.com/amruth/signature-detection-qky9p,Signature Detection.v2i.yolov11.zip,CC-BY-4.0,research_and_training,ready,"2234 images in YOLOv11 format; preserve attribution"
+doclaynet,https://github.com/DS4SD/DocLayNet,DocLayNet-main.zip,CDLA-Permissive-1.0,layout_warmup,reference_only,"Downloaded archive is repository code only; fetch the data separately from the official Hugging Face dataset"
+ndl_docl,https://github.com/ndl-lab/layout-dataset,layout-dataset-master.zip,secondary_use_with_attribution,layout_stamp_table_warmup,sample_only,"Archive contains samples and annotations; preserve attribution and check non-copyright rights before use"
+pubtables_1m,https://github.com/microsoft/table-transformer,table-transformer-main.zip,verify_before_download,table_warmup,reference_only,"Downloaded archive is repository code only; fetch dataset separately from the official Microsoft Research Open Data or Hugging Face release"
+vietnamese_ocr_archive,user_supplied_source_not_recorded,archive.zip,license_verification_required,annotation_candidate,quarantined,"Vietnamese document images with OCR JSON; may be inspected but cannot be used for training until the exact source and license are recorded"
+vn_contracts_authorized,internal_permission_required,,written_data_use_agreement,final_finetune_and_evaluation,pending,"Do not add until anonymization and written permission are complete"

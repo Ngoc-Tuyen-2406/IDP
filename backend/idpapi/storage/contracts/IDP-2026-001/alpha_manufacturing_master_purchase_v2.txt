@@ -1,0 +1,17 @@
+CONTRACT NUMBER: IDP-2026-001
+TITLE: Master Purchase Agreement for Production Materials
+PARTNER: Alpha Manufacturing JSC
+SIGNED DATE: 2026-01-05
+EFFECTIVE DATE: 2026-01-10
+EXPIRY DATE: 2027-01-09
+TOTAL VALUE: 3,500,000,000 VND
+
+KEY TERMS
+- Scope: supply of production materials for Q1-Q4 2026.
+- Delivery SLA: 95 percent on-time.
+- Delay penalty: 0.05 percent per delayed day, capped at 8 percent of delayed lot value.
+- Payment schedule: 30-40-30.
+- Warranty period: 12 months from acceptance.
+
+VERSION NOTE
+Version 2 adds SLA clarification and updated delay penalty language.

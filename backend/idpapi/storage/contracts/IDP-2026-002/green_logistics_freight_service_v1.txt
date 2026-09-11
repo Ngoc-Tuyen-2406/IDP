@@ -1,0 +1,13 @@
+CONTRACT NUMBER: IDP-2026-002
+TITLE: Regional Freight and Distribution Service Agreement
+PARTNER: Green Logistics Co., Ltd
+EFFECTIVE DATE: 2026-06-20
+EXPIRY DATE: 2027-06-19
+
+SCOPE
+- Warehousing in Ho Chi Minh City.
+- Inland trucking to Southern provinces.
+- Last-mile delivery for retail channels.
+
+CURRENT STATUS
+Processing by AI pipeline for OCR, metadata extraction and summary.

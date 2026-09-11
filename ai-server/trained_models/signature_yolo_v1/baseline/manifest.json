@@ -1,0 +1,9 @@
+{
+  "model_name": "idp-signature-yolo11n",
+  "model_type": "yolo",
+  "version": "v1",
+  "description": "YOLO signature detector trained on the normalized approved signature dataset.",
+  "classes": ["signature"],
+  "weights": "weights/best.pt",
+  "input_size": 1024
+}

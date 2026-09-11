@@ -1,0 +1,2 @@
+document_id,source_owner,document_type,language,permission_reference,permission_date,contains_pii,anonymized_at,anonymized_by,signature_or_seal_removed,allowed_for_training,allowed_for_evaluation,storage_path,notes
+VN-EXAMPLE-001,Example Company,service_contract,vi,DUA-2026-001,2026-08-22,yes,2026-08-22,data-steward,yes,yes,yes,datasets/raw/vn_contracts_authorized/VN-EXAMPLE-001.pdf,Replace this example row before use

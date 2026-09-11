@@ -1,0 +1,9 @@
+# Generated data is intentionally outside Git; run the preparation script first.
+path: ../../datasets/processed/signature_yolo_v1
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names:
+  0: signature

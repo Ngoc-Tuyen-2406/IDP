@@ -1,0 +1,10 @@
+CONTRACT NUMBER: IDP-2026-005
+TITLE: Software Subscription and Support Agreement
+PARTNER: Lotus Fintech Solutions
+STATUS: Rejected
+
+RISK NOTES
+- Data processing addendum missing.
+- Audit rights are not sufficient for internal security policy.
+- Liability cap remains unfavorable after revision.
+- Contract should not be approved until redlines are resolved.

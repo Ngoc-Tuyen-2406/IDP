@@ -1,0 +1,73 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: idp-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-idp_system}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/idp.sql:/docker-entrypoint-initdb.d/01-idp.sql:ro
+      - ./database/seed_full_system.sql:/docker-entrypoint-initdb.d/02-seed_full_system.sql:ro
+
+  ai-server:
+    build:
+      context: ./ai-server
+    container_name: idp-ai-server
+    environment:
+      AI_APP_NAME: idp-ai-server
+      AI_APP_VERSION: v1
+      AI_HOST: 0.0.0.0
+      AI_PORT: 8000
+      AI_MODEL_ROOT: /app/trained_models
+      AI_UPLOAD_ROOT: /app/uploads
+      AI_OUTPUT_ROOT: /app/outputs
+      AI_LOG_ROOT: /app/logs
+    volumes:
+      - ./ai-server/trained_models:/app/trained_models
+      - ./ai-server/uploads:/app/uploads
+      - ./ai-server/outputs:/app/outputs
+      - ./ai-server/logs:/app/logs
+      - ./storage:/app/shared-storage
+    ports:
+      - "${AI_PORT:-8000}:8000"
+
+  backend:
+    build:
+      context: ./backend/idpapi
+    container_name: idp-backend
+    depends_on:
+      - postgres
+      - ai-server
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-idp_system}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-postgres}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      APP_SECURITY_JWT_SECRET: ${APP_SECURITY_JWT_SECRET:-change-me}
+      APP_AI_BASE_URL: http://ai-server:8000
+      APP_STORAGE_CONTRACT_DIR: /app/storage/contracts
+    volumes:
+      - ./storage:/app/storage
+    ports:
+      - "${BACKEND_PORT:-8080}:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: /api
+    container_name: idp-frontend
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+
+volumes:
+  postgres_data:
